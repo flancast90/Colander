@@ -27,7 +27,7 @@ python colander.py
 <br />
 
 ### Performance
-[Imgur](https://i.imgur.com/MYi83Fr.png)
+![Imgur](https://i.imgur.com/MYi83Fr.png)
 
 <br />
 
