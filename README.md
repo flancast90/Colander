@@ -19,10 +19,12 @@ remainder 0. If one or more can, number is composite.
 
 ### Usage/Install
 
-Using a terminal of your choice, ``cd`` into the ``Colander-main/bin/dist`` folder. Assuming you have python installed, you should be able to start the prime-finding process by
+Using a terminal of your choice, ``cd`` into the ``Colander-main/bin`` folder. Assuming you have python installed, you should be able to start the prime-finding process by
 ```bash
-./miner
+./miner [numer to iterate (eg. 1000]
 ```
+
+Your primes will then show up in the ``project/primes.py`` file, and will be used every time you run the ``miner.py`` file to improve performance!
 
 <br />
 
