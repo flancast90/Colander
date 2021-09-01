@@ -1,11 +1,11 @@
 import math
 import sys
 import os
-
 from primes import *
 
-# global variable declaration
-toTest = toTest
+# global variable initialisation
+primes = toTest
+continuous = numbersIterated+1
 
 def findPrimes(primeRange):
     if (primeRange > 1000):
@@ -20,12 +20,13 @@ def findPrimes(primeRange):
 
 
 def primeFinder(primeRange):
+  global continuous
   # we will add primes as we find them here, for iteration when a number 
   # is not prime because of two primes multiplied together. 
-  primes = toTest.copy()
   primeStill = "false"
 
-  i = numbersIterated+1
+  i = continuous 
+
   lim = i+primeRange
   # subtract 4 because we use 2, 3, 5, 7 to compare earlier, so we already
   # have those (reduce runtime)
@@ -66,9 +67,9 @@ def primeFinder(primeRange):
         f.write('# list length='+str(len(primes))+'\nnumbersIterated = '+str(i)+'\ntoTest = '+str(primes))
     f.close()
     i = i + 1
-  return None
+    continuous = i
 
 if (len(sys.argv) != 2):
-    print("Error: Syntax should look like ./miner [num of iterations]")
+    print("Error: Syntax should look like miner.py [num of iterations]")
 else:
     findPrimes(int(sys.argv[1]))
