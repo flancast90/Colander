@@ -1,1 +1,3 @@
-# primes are saved here as python list to speed-performance later on
+# list length=0
+numbersIterated = 3
+toTest = [3, 5, 7]
