@@ -27,7 +27,7 @@ Using a terminal of your choice, ``cd`` into the ``Colander-main/bin/dist`` fold
 <br />
 
 ### Performance
-<img src="https://i.imgur.com/MYi83Fr.png" style="background-color:white"/>
+<img src="https://i.imgur.com/BUOz9sV.png" style="background-color:white"/>
 
 <br />
 
