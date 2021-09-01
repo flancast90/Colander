@@ -73,7 +73,7 @@ def primeFinder(primeRange):
   return primes
 
 
-ns = range(5, 10000)
+ns = range(5, 200)
 ts = [timeit.timeit('findPrimes(primeRange)',
                     setup='primeRange={}'.format(n),
                     globals=globals(),
@@ -81,5 +81,5 @@ ts = [timeit.timeit('findPrimes(primeRange)',
          for n in ns]
 plt.plot(ns, ts, 'or')
 plt.title("Prime Finder Performance")
-plt.xlabel("No. of Primes Found")
+plt.xlabel("No. Iterated")
 plt.ylabel("Time (ms)")
