@@ -19,7 +19,7 @@ remainder 0. If one or more can, number is composite.
 
 ### Usage/Install
 
-Using a terminal of your choice, ``cd`` into ``the Colander-main/bin/dist`` folder. Assuming you have python installed, you should be able to start the prime-finding process by
+Using a terminal of your choice, ``cd`` into the ``Colander-main/bin/dist`` folder. Assuming you have python installed, you should be able to start the prime-finding process by
 ```bash
 ./miner
 ```
