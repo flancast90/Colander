@@ -1,16 +1,22 @@
 import math
+import sys
+import os
+sys.path.append('mines')
+from primes import *
+
+# global variable declaration
 
 def findPrimes(primeRange):
   # we will add primes as we find them here, for iteration when a number 
   # is not prime because of two primes multiplied together. 
-  primes = [2, 3, 5, 7]
+  primes = toTest.copy()
   primeStill = "false"
 
-  togo = 0
-  i = 0
+  i = numbersIterated
+  lim = numbersIterated+primeRange
   # subtract 4 because we use 2, 3, 5, 7 to compare earlier, so we already
   # have those (reduce runtime)
-  while togo < primeRange-4:
+  while i < lim:
     # number is odd (all primes are odd)
     if (i % 2 != 0):
       # we only need to go up to the floored sqrt of the number - 1, 
@@ -27,6 +33,8 @@ def findPrimes(primeRange):
       if ((i % 3 == 0) or (i % 5 == 0) or (i % 7 == 0)):
         # number is not prime
         pass
+      elif (i in toTest):
+        primes.append(i)
       else:
         for j in primes:
           if j <= high:
@@ -40,10 +48,11 @@ def findPrimes(primeRange):
           else:
             if (primeStill == "true"):
               primes.append(i)
-              togo = togo+1
+              with open(os.getcwd()+'/mines/primes.py', 'w') as f:
+                f.write('# list length='+str(len(primes))+'\nnumbersIterated = '+str(i)+'\ntoTest = '+str(primes))
+              f.close()
             break
-    i = i+1
-  return primes
+    i = i + 1
+  return None
 
-inp = int(input("How many primes would you like to find"))
-print(findPrimes(inp))
+findPrimes(1000)
