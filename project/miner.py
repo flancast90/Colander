@@ -6,6 +6,7 @@ from primes import *
 
 # global variable declaration
 toTest = toTest
+print(toTest)
 
 def findPrimes(primeRange):
     if (primeRange > 1000):
@@ -25,14 +26,14 @@ def primeFinder(primeRange):
   primes = toTest.copy()
   primeStill = "false"
 
-  i = numbersIterated
-  lim = numbersIterated+primeRange
+  i = numbersIterated+1
+  lim = i+primeRange
   # subtract 4 because we use 2, 3, 5, 7 to compare earlier, so we already
   # have those (reduce runtime)
   while i < lim:
     # number is odd (all primes are odd)
     if (i % 2 != 0):
-      # we only need to go up to the floored sqrt of the number - 1, 
+      # we only need to go up to the floored sqrt of the number, 
       # because nothing greater than the sqrt of the number will multiply
       # to equal it that wasn't already covered. Also, the - 1 is included along 
       # with the floor statement, since if it is divisible by the sqrt, it is
@@ -61,10 +62,10 @@ def primeFinder(primeRange):
           else:
             if (primeStill == "true"):
               primes.append(i)
-              with open(os.getcwd()+'/../project/primes.py', 'w') as f:
-                f.write('# list length='+str(len(primes))+'\nnumbersIterated = '+str(i)+'\ntoTest = '+str(primes))
-              f.close()
             break
+    with open(os.getcwd()+'/../project/primes.py', 'w') as f:
+        f.write('# list length='+str(len(primes))+'\nnumbersIterated = '+str(i)+'\ntoTest = '+str(primes))
+    f.close()
     i = i + 1
   return None
 
