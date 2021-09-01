@@ -6,7 +6,6 @@ from primes import *
 
 # global variable declaration
 toTest = toTest
-print(toTest)
 
 def findPrimes(primeRange):
     if (primeRange > 1000):
