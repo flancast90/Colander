@@ -10,9 +10,9 @@ A custom prime algorithm, implementation, and performance code &amp; review
 3. If number divided by 3, 5, and 7 does not have a remainder of 0, continue. 
 Otherwise number is not prime.
 4. If number is less than or equal to 11, add to primes list (primes list already contains 2, 3, 5, 7)
-5. If it is greater than 11, check if any of the numbers inside primes list can go into number with 
+5. If it is greater than 11, check if any of the numbers inside primes list which are less than the square root of number can go into number with 
 remainder 0. If one or more can, number is composite.
-6. Number is prime.
+6. If everything is true, number is prime.
 ```
 
 <br />
