@@ -1,6 +1,7 @@
 import math
 import sys
 import os
+import tqdm
 from primes import *
 
 # global variable initialisation
@@ -11,7 +12,7 @@ def findPrimes(primeRange):
     if (primeRange > 1000):
         iteration = math.floor(primeRange/1000)
         lastone = primeRange % 1000
-        for i in range(iteration):
+        for i in tqdm.tqdm(range(iteration)):
             primeFinder(1000)
         primeFinder(lastone)
         
